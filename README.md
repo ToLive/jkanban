@@ -122,18 +122,18 @@ Which jKanban will convert to:
 ## API
 jKanban provides the easiest possible API to make your boards awesome!
 
-Method Name           | Arguments                        | Description
-----------------------|----------------------------------|------------------------------------------------------------------------------------------------------------------------------
-`addElement`          | `boardID, element, position`     | Add `element` in the board with ID `boardID`, `element` is the standard format. If `position` is set, inserts at position starting from 0
-`addForm`             | `boardID, formItem`              | Add `formItem` as html element into the board with ID `boardID`
-`addBoards`           | `boards`                         | Add one or more boards in the kanban, `boards` are in the standard format
-`findElement`         | `id`                             | Find board's item by `id`
-`replaceElement`      | `id, element`                    | Replace item by `id` with `element` JSON standard format
-`getParentBoardID`    | `id`                             | Get board ID of item `id` passed
-`findBoard`           | `id`                             | Find board by `id`
-`getBoardElements`    | `id`                             | Get all item of a board
-`removeElement`       | `id`                             | Remove a board's element by id
-`removeBoard`         | `id`                             | Remove a board by id
+Method Name           | Arguments                                | Description
+----------------------|------------------------------------------|------------------------------------------------------------------------------------------------------------------------------
+`addElement`          | `boardID, element, position`             | Add `element` in the board with ID `boardID`, `element` is the standard format. If `position` is set, inserts at position starting from 0
+`addForm`             | `boardID, formItem, position = "bottom"` | Add `formItem` as html element into the board with ID `boardID`. Position can be `top` or `bottom`
+`addBoards`           | `boards`                                 | Add one or more boards in the kanban, `boards` are in the standard format
+`findElement`         | `id`                                     | Find board's item by `id`
+`replaceElement`      | `id, element`                            | Replace item by `id` with `element` JSON standard format
+`getParentBoardID`    | `id`                                     | Get board ID of item `id` passed
+`findBoard`           | `id`                                     | Find board by `id`
+`getBoardElements`    | `id`                                     | Get all item of a board
+`removeElement`       | `id`                                     | Remove a board's element by id
+`removeBoard`         | `id`                                     | Remove a board by id
 
 ## Example
 Clone the repo and look in the `example` folder

@@ -227,13 +227,18 @@ var dragula = require('dragula');
       return self
     }
 
-    this.addForm = function (boardID, formItem) {
+    this.addForm = function (boardID, formItem, position = 'bottom') {
       var board = self.element.querySelector(
         '[data-id="' + boardID + '"] .kanban-drag'
       )
       var _attribute = formItem.getAttribute('class')
       formItem.setAttribute('class', _attribute + ' not-draggable')
-      board.appendChild(formItem)
+
+      if (position === "top") {
+        board.insertBefore(formItem, board.firstChild)
+      } else {
+        board.appendChild(formItem)
+      }
       return self
     }
 
