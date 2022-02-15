@@ -160,6 +160,9 @@
                                 moves: function (el, source, handle, sibling) {
                                     return self.__getCanMove(handle)
                                 },
+                                accepts: function (el, target) {
+                                    return __findBoardJSON(target.parentNode.dataset.id).sortable ?? true
+                                },
                                 revertOnSpill: true
                             })
                             .on('cancel', function (el, container, source) {

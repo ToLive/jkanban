@@ -70,6 +70,7 @@ Now take a look to the `boards` object
         "title" : "Board Title",              // title of the board
         "class" : "class1,class2,...",        // css classes to add at the title
         "dragTo": ['another-board-id',...],   // array of ids of boards where items can be dropped (default: [])
+        "sortable": false,                     // items can be reordered in the board (default: true)
         "item"  : [                           // item of this board
             {
                 "id"    : "item-id-1",        // id of the item
